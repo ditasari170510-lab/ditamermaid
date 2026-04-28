@@ -1,4 +1,6 @@
-/* Neumorphism Login Form - Clean & Elegant Kopi Ayu Version */
+/* Neumorphism Login Form - Kopi Ayu Theme
+   Optimized Layout & Color Consistency
+*/
 
 * {
     margin: 0;
@@ -7,14 +9,14 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    /* Kembali ke latar abu-abu terang yang bersih */
-    background: #e0e5ec; 
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #1a1a1a; /* Senada dengan header Kopi Ayu */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .login-container {
@@ -23,107 +25,241 @@ body {
 }
 
 .login-card {
-    background: #e0e5ec;
+    background: #1a1a1a;
     border-radius: 30px;
     padding: 50px 40px;
-    /* Efek bayangan neumorphism klasik */
-    box-shadow: 20px 20px 60px #bec3cf, -20px -20px 60px #ffffff;
+    box-shadow: 
+        15px 15px 30px #0d0d0d,
+        -10px -10px 30px #272727;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #222;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+.login-header {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.neu-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        8px 8px 16px #0d0d0d,
+        -8px -8px 16px #272727;
+}
+
+.icon-inner {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c79c60; /* Warna Emas Kopi Ayu */
+}
+
+.icon-inner svg {
+    width: 100%;
+    height: 100%;
 }
 
 .login-header h2 {
-    color: #3d4468;
-    font-size: 2rem;
+    color: #ffffff;
+    font-family: 'Damion', cursive; 
+    font-size: 2.2rem;
     margin-bottom: 8px;
 }
 
 .login-header p {
-    color: #9499b7;
-    margin-bottom: 35px;
+    color: #a6a6a6;
+    font-size: 15px;
 }
 
-/* --- Input Group Style --- */
+/* --- Input Styles --- */
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     position: relative;
-    text-align: left;
 }
 
 .neu-input {
-    background: #e0e5ec;
+    position: relative;
+    background: #1a1a1a;
     border-radius: 15px;
-    box-shadow: inset 8px 8px 16px #bec3cf, inset -8px -8px 16px #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 5px 15px;
+    box-shadow: 
+        inset 6px 6px 12px #0d0d0d,
+        inset -4px -4px 12px #272727;
+    transition: all 0.3s ease;
 }
 
 .neu-input input {
     width: 100%;
     background: transparent;
     border: none;
-    padding: 15px;
-    color: #3d4468;
+    padding: 20px 24px 20px 55px;
+    color: #ffffff;
     font-size: 16px;
     outline: none;
 }
 
-.input-icon {
-    color: #9499b7;
+.neu-input label {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-/* --- Options (Checkbox & Forgot Password) --- */
+.neu-input input:focus + label,
+.neu-input input:not(:placeholder-shown) + label {
+    top: 8px;
+    font-size: 12px;
+    color: #c79c60;
+    transform: translateY(0);
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #777;
+}
+
+/* --- Password Toggle --- */
+.neu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a1a1a;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #777;
+    box-shadow: 3px 3px 6px #0d0d0d, -3px -3px 6px #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* --- Form Options (Checkbox & Forgot Link) --- */
 .form-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    font-size: 14px;
+    width: 100%;
 }
 
 .remember-wrapper {
     display: flex;
     align-items: center;
-    color: #6c7293;
+    cursor: pointer;
+}
+
+.remember-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    color: #a6a6a6;
+    font-size: 14px;
     cursor: pointer;
 }
 
 .neu-checkbox {
     width: 20px;
     height: 20px;
-    background: #e0e5ec;
-    border-radius: 6px;
-    box-shadow: 3px 3px 8px #bec3cf, -3px -3px 8px #ffffff;
+    background: #1a1a1a;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px #0d0d0d, -2px -2px 5px #272727;
     margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.remember-wrapper input[type="checkbox"]:checked + .checkbox-label .neu-checkbox svg {
+    color: #c79c60;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.neu-checkbox svg {
+    width: 12px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s ease;
 }
 
 .forgot-link {
-    color: #c79c60; /* Sentuhan emas Kopi Ayu */
+    color: #c79c60;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 14px;
 }
 
-/* --- Button Masuk (Pusat Perhatian) --- */
+/* --- Login Button --- */
 .neu-button {
     width: 100%;
-    background: #e0e5ec;
+    background: #c79c60;
     border: none;
     border-radius: 15px;
     padding: 18px;
-    color: #c79c60; /* Teks emas agar selaras dengan logo */
+    color: #1a1a1a;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 8px 8px 20px #bec3cf, -8px -8px 20px #ffffff;
-    transition: all 0.3s ease;
     margin-bottom: 25px;
+    box-shadow: 5px 5px 15px #0d0d0d;
+    transition: all 0.3s ease;
 }
 
-.neu-button:active {
-    box-shadow: inset 4px 4px 10px #bec3cf, inset -4px -4px 10px #ffffff;
+.neu-button:hover {
+    background: #d4ae7a;
+    transform: translateY(-2px);
 }
 
-/* --- Social Login Berjejer Rapi --- */
+/* --- Divider & Social Login --- */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #555;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
 .social-login {
     display: flex;
     justify-content: center;
@@ -134,18 +270,45 @@ body {
 .neu-social {
     width: 50px;
     height: 50px;
-    background: #e0e5ec;
-    border-radius: 15px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 6px 6px 15px #bec3cf, -6px -6px 15px #ffffff;
-    color: #6c7293;
+    box-shadow: 5px 5px 12px #0d0d0d, -5px -5px 12px #272727;
+    color: #a6a6a6;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.neu-social:hover {
+    color: #c79c60;
+    transform: translateY(-2px);
+}
+
+/* --- Footer Link --- */
+.signup-link {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
 }
 
 .signup-link a {
-    color: #c79c60; /* Aksen emas */
+    color: #c79c60;
     text-decoration: none;
     font-weight: 600;
+}
+
+/* --- Success/Error State --- */
+.error-message {
+    color: #ff3b5c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-message {
+    text-align: center;
+    color: #ffffff;
 }
