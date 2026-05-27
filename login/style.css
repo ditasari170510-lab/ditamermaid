@@ -286,41 +286,22 @@ body {
 }
 
 /* ==========================================================================
-   PERBAIKAN TOTAL KOTAK BERHASIL LOGIN (KOPI AYU THEME SUPER FORCE)
+   KUSTOMISASI AMAN AREA SUKSES LOGIN (TIDAK MERUSAK IKON DAN LINK)
    ========================================================================== */
 
-/* 1. Paksa Teks "Berhasil!" dan teks pengalihan di bawah kartu agar menjadi PUTIH */
-.login-container + div, 
-.login-card + div,
-body > div:not(.login-container),
-body > div:not(.login-container) h2,
-body > div:not(.login-container) p,
-body > div:not(.login-container) div {
+/* Mewarnai teks "Berhasil!" dan teks pengalihan menjadi putih terang */
+.login-card ~ div h2,
+.login-card ~ div p,
+.login-card ~ h2,
+.login-card ~ p {
     color: #ffffff !important;
 }
 
-/* 2. Paksa ikon lingkaran neumorphism sukses dan tanda centangnya menjadi EMAS KOPI */
-.login-container + div .neu-icon,
-.login-card + div .neu-icon,
-body > div:not(.login-container) [class*="icon"] {
-    background: #1a1a1a !important;
-    box-shadow: 8px 8px 16px #0d0d0d, -8px -8px 16px #272727 !important;
-}
-
-/* Merubah warna coretan tanda centang hitam (baik berbentuk teks, font-awesome, svg, atau border) menjadi Emas */
-.login-container + div i, 
-.login-card + div i,
-body > div:not(.login-container) i,
-svg path, 
-.checkmark,
-[class*="check"] {
+/* Mewarnai tanda centang hitam menjadi warna emas Kopi Ayu */
+.login-card ~ div .checkmark,
+.login-card ~ div i.fa-check,
+.login-card ~ div svg path {
     stroke: #c79c60 !important;
     fill: #c79c60 !important;
     color: #c79c60 !important;
-    border-color: #c79c60 !important;
-}
-
-/* Jika berupa tanda centang CSS border biasa, kita buat tebal dan berwarna emas */
-.checkmark::after {
-    border-color: #c79c60 !important;
 }
