@@ -209,3 +209,118 @@ body {
     cursor: pointer;
     margin-bottom: 25px;
     box-shadow: 5px 5px 15px #0d0d0d;
+    transition: all 0.3s ease;
+}
+
+.neu-button:hover {
+    background: #d4ae7a;
+    transform: translateY(-2px);
+}
+
+/* --- Divider & Social Login --- */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #555;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.neu-social {
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 12px #0d0d0d, -5px -5px 12px #272727;
+    color: #a6a6a6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.neu-social:hover {
+    color: #c79c60;
+    transform: translateY(-2px);
+}
+
+/* --- Footer Link --- */
+.signup-link {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #c79c60;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Error State Only --- */
+.error-message {
+    color: #ff3b5c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* ==========================================================================
+   PERBAIKAN TOTAL KOTAK BERHASIL LOGIN (KOPI AYU THEME SUPER FORCE)
+   ========================================================================== */
+
+/* 1. Paksa Teks "Berhasil!" dan teks pengalihan di bawah kartu agar menjadi PUTIH */
+.login-container + div, 
+.login-card + div,
+body > div:not(.login-container),
+body > div:not(.login-container) h2,
+body > div:not(.login-container) p,
+body > div:not(.login-container) div {
+    color: #ffffff !important;
+}
+
+/* 2. Paksa ikon lingkaran neumorphism sukses dan tanda centangnya menjadi EMAS KOPI */
+.login-container + div .neu-icon,
+.login-card + div .neu-icon,
+body > div:not(.login-container) [class*="icon"] {
+    background: #1a1a1a !important;
+    box-shadow: 8px 8px 16px #0d0d0d, -8px -8px 16px #272727 !important;
+}
+
+/* Merubah warna coretan tanda centang hitam (baik berbentuk teks, font-awesome, svg, atau border) menjadi Emas */
+.login-container + div i, 
+.login-card + div i,
+body > div:not(.login-container) i,
+svg path, 
+.checkmark,
+[class*="check"] {
+    stroke: #c79c60 !important;
+    fill: #c79c60 !important;
+    color: #c79c60 !important;
+    border-color: #c79c60 !important;
+}
+
+/* Jika berupa tanda centang CSS border biasa, kita buat tebal dan berwarna emas */
+.checkmark::after {
+    border-color: #c79c60 !important;
+}
