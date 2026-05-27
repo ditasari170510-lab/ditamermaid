@@ -286,20 +286,25 @@ body {
 }
 
 /* ==========================================================================
-   KUSTOMISASI AMAN AREA SUKSES LOGIN (TIDAK MERUSAK IKON DAN LINK)
+   FIX AREA SUKSES: SEMBUNYIKAN SECARA DEFAULT & WARNAI KOPI AYU
    ========================================================================== */
+
+/* Menyembunyikan seluruh elemen sukses di bawah kartu saat halaman pertama dibuka */
+.login-card ~ div {
+    display: none; 
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* Mewarnai teks "Berhasil!" dan teks pengalihan menjadi putih terang */
 .login-card ~ div h2,
-.login-card ~ div p,
-.login-card ~ h2,
-.login-card ~ p {
+.login-card ~ div p {
     color: #ffffff !important;
 }
 
 /* Mewarnai tanda centang hitam menjadi warna emas Kopi Ayu */
 .login-card ~ div .checkmark,
-.login-card ~ div i.fa-check,
+.login-card ~ div i,
 .login-card ~ div svg path {
     stroke: #c79c60 !important;
     fill: #c79c60 !important;
