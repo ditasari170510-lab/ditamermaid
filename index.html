@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopi Ayu - Beranda</title>
-    <!-- Menghubungkan ke file CSS di dalam folder css -->
+    <!-- Menghubungkan ke file CSS utama kamu -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <!-- BAGIAN NAVBAR (NAVIGASI) -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo Kopi Ayu -->
+            <!-- Logo Kopi Ayu di Sebelah Kiri -->
             <div class="nav-logo">
                 <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
@@ -32,26 +32,27 @@
                 <li><a href="#">KONTAK</a></li>
             </ul>
 
-            <!-- Area Autentikasi Kanan (Tombol Login Menggunakan Onclick JavaScript) -->
+            <!-- Area Autentikasi Kanan (Tombol Login) -->
             <div class="nav-auth">
                 <span id="userStatus" class="status-text">BELUM LOGIN</span>
-                <!-- Menggunakan fungsi pindah halaman langsung saat diklik -->
-                <button onclick="window.location.href='login/index.html';" class="login-btn">Login</button>
+                <!-- Trik Tombol: Diarahkan langsung masuk ke folder login/index.html -->
+                <a href="login/index.html" class="login-btn">Login</a>
             </div>
         </div>
     </nav>
 
-    <!-- BAGIAN HERO (WELCOME BANNER) -->
+    <!-- BAGIAN BANNER UTAMA (HERO SECTION) -->
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <!-- Lampu Melayang Dekorasi -->
+            <!-- Tiga Lampu Gantung Estetik Milik Kopi Ayu -->
             <div class="lamps-container">
                 <div class="lamp"></div>
                 <div class="lamp"></div>
                 <div class="lamp"></div>
             </div>
             
+            <!-- Teks Selamat Datang Utama -->
             <h1 class="welcome-text">—— Selamat Datang ——</h1>
             <p class="sub-welcome">Nikmati seduhan kopi hangat penuh cinta hanya di Kopi Ayu</p>
         </div>
