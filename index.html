@@ -1,156 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kopi Ayu - Kenikmatan Klasik</title>
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/templatemo-style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
-  <style>
-    /* Style tambahan agar tampilan sapaan user dan tombol dari script gurumu terlihat rapi */
-    .nav-cta {
-      background-color: #c7a17a;
-      color: white;
-      border: none;
-      padding: 6px 15px;
-      margin-left: 10px;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    .nav-cta:hover {
-      background-color: #a8845f;
-    }
-    .user-text {
-      color: #c7a17a;
-      font-weight: bold;
-      padding: 10px 15px;
-      display: inline-block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Ayu - Beranda</title>
+    <!-- Menghubungkan ke file CSS di dalam folder css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  
-  <div class="tm-top-header">
-    <div class="container">
-      <div class="row">
-        <div class="tm-top-header-inner">
-          <div class="tm-logo-container">
-            <img src="img/logo.png" alt="Logo" class="tm-site-logo">
-            <h1 class="tm-site-name tm-handwriting-font">Kopi Ayu</h1>
-          </div>
-          <div class="mobile-menu-icon">
-            <i class="fa fa-bars"></i>
-          </div>
-          <nav class="tm-nav">
-            <ul>
-              <li><a href="index.html" class="active">Beranda</a></li>
-              <li><a href="today-special.html">Menu Spesial</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="contact.html">Kontak</a></li>
-              
-              <li><span id="userInfo" class="user-text"></span></li>
-              
-              <li id="authArea">
-                <button onclick="goLogin()" class="nav-cta">Login</button>
-              </li>
-            </ul>
-          </nav>     
-        </div>            
-      </div>    
-    </div>
-  </div>
 
-  <section class="tm-welcome-section">
-    <div class="container tm-position-relative">
-      <div class="tm-lights-container">
-        <img src="img/light.png" alt="Light" class="light light-1">
-        <img src="img/light.png" alt="Light" class="light light-2">
-        <img src="img/light.png" alt="Light" class="light light-3">  
-      </div>        
-      <div class="row tm-welcome-content">
-        <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="img/header-line.png" alt="Line" class="tm-header-line">&nbsp;Selamat Datang&nbsp;&nbsp;<img src="img/header-line.png" alt="Line" class="tm-header-line"></h2>
-        <h2 class="gold-text tm-welcome-header-2">Kopi Ayu</h2>
-        <p class="gray-text tm-welcome-description">Temukan kehangatan dan kenikmatan sejati dalam setiap cangkir kopi kami. Di <span class="gold-text">Kopi Ayu</span>, kami memanggang biji kopi pilihan dengan sepenuh hati untuk menghadirkan cita rasa klasik yang tak terlupakan.</p>
-        <a href="#main" class="tm-more-button tm-more-button-welcome">Pelajari Lebih Lanjut</a>      
-      </div>
-      <img src="img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">
-    </div>      
-  </section>
-
-  <div class="tm-main-section light-gray-bg">
-    <div class="container" id="main">
-      <section class="tm-section row">
-        <div class="col-lg-9 col-md-9 col-sm-8">
-          <h2 class="tm-section-header gold-text tm-handwriting-font">Kopi Terbaik Untuk Anda</h2>
-          <h2>Cita Rasa Nusantara</h2>
-          <p class="tm-welcome-description">Kami percaya bahwa kopi yang baik bermula dari dedikasi. Itulah mengapa Kopi Ayu hanya menggunakan biji kopi lokal kualitas premium yang dipetik langsung oleh para petani kita. Dipadukan dengan keahlian barista kami, setiap seduhan adalah cerita tentang tradisi dan kualitas.</p>
-          <a href="menu.html" class="tm-more-button margin-top-30">Lihat Menu Kami</a> 
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 tm-welcome-img-container">
-          <img src="img/1.jpg" alt="Welcome Image" class="img-responsive">  
-        </div>
-      </section>          
-    </div>
-  </div>
-
-  <footer>
-    <div class="tm-black-bg">
-      <div class="container">
-        <div class="row margin-bottom-60">
-          <nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
-            <h3 class="tm-footer-div-title">Menu Utama</h3>
-            <ul>
-              <li><a href="index.html">Beranda</a></li>
-              <li><a href="#">Tentang Kami</a></li>
-              <li><a href="#">Direktori</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Layanan Kami</a></li>
-            </ul>
-          </nav>
-          <div class="col-lg-5 col-md-5 tm-footer-div">
-            <h3 class="tm-footer-div-title">Tentang Kami</h3>
-            <p class="margin-top-15">Kopi Ayu hadir sebagai teman setia untuk menemani waktu sibuk maupun santaimu. Kami berdedikasi menyajikan cita rasa asli nusantara dalam setiap cangkirnya.</p>
-            <p class="margin-top-15">Misi kami adalah memberikan pengalaman ngopi yang hangat dan bersahabat bagi semua orang.</p>
-          </div>
-          <div class="col-lg-4 col-md-4 tm-footer-div">
-            <h3 class="tm-footer-div-title">Hubungi Kami</h3>
-            <p>Jangan ragu untuk mengikuti media sosial kami untuk mendapatkan berita terbaru seputar promo dan event menarik.</p>
-            <div class="tm-social-icons-container">
-              <a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-youtube"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-behance"></i></a>
+    <!-- BAGIAN NAVBAR (NAVIGASI) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo Kopi Ayu -->
+            <div class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+                <span>Kopi Ayu</span>
             </div>
-          </div>
-        </div>          
-      </div>  
-    </div>    
-    <div>
-      <div class="container">
-        <div class="row tm-copyright">
-          <p class="col-lg-12 small copyright-text text-center">Hak Cipta &copy; 2026 Kopi Ayu House</p>
-        </div>  
-      </div>
-    </div>
-  </footer>
 
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>  
-  <script type="text/javascript" src="js/templatemo-script.js"></script>
+            <!-- Menu Navigasi Tengah -->
+            <ul class="nav-menu">
+                <li><a href="#" class="active">BERANDA</a></li>
+                <li><a href="#">MENU SPESIAL</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">KONTAK</a></li>
+            </ul>
 
-  <script type="text/javascript" src="welcome.js"></script> 
+            <!-- Area Autentikasi Kanan (Tombol Login Menggunakan Onclick JavaScript) -->
+            <div class="nav-auth">
+                <span id="userStatus" class="status-text">BELUM LOGIN</span>
+                <!-- Menggunakan fungsi pindah halaman langsung saat diklik -->
+                <button onclick="window.location.href='login/index.html';" class="login-btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BAGIAN HERO (WELCOME BANNER) -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Lampu Melayang Dekorasi -->
+            <div class="lamps-container">
+                <div class="lamp"></div>
+                <div class="lamp"></div>
+                <div class="lamp"></div>
+            </div>
+            
+            <h1 class="welcome-text">—— Selamat Datang ——</h1>
+            <p class="sub-welcome">Nikmati seduhan kopi hangat penuh cinta hanya di Kopi Ayu</p>
+        </div>
+    </header>
+
 </body>
 </html>
