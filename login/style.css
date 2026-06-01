@@ -75,6 +75,8 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    position: relative;
+    z-index: 10000; /* Selangkah lebih maju daripada kontainer navbarmu */
 }
 
 .status-text {
