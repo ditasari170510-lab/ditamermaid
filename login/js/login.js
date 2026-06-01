@@ -1,36 +1,51 @@
 document.getElementById("loginForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
+    // Mengambil nilai input username dan password
+    const usernameValue = document.getElementById("username").value.trim();
+    const passwordValue = document.getElementById("password").value.trim();
 
-    const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
-    });
+    // Validasi dasar jika inputan kosong
+    if (!usernameValue || !passwordValue) {
+        alert("Username dan Password wajib diisi!");
+        return;
+    }
 
-    const data = await res.json();
+    try {
+        // Menembak data ke API Heri Susanta
+        const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `action=login&username=${encodeURIComponent(usernameValue)}&password=${encodeURIComponent(passwordValue)}`
+        });
 
-    if (data.status === "success") {
-        // simpan username
+        const data = await res.json();
+
+        // Cek respons dari server API
+        if (data.status === "success") {
+            // Simpan nama user yang login ke penyimpanan browser
             localStorage.setItem("username", data.username);
-            window.location.href = "../index.html";
-         
-    // } else {
-    //     document.getElementById("message").innerText = "Username / Password salah";alert("Login gagal");
-    // }
-    
-    } else {
-    const alertBox = document.getElementById("alertBox");
-    alertBox.innerText = "Username atau Password salah, silahkan coba lagi";
-    alertBox.style.display = "block";
-
-    setTimeout(() => {
-        alertBox.style.display = "none";
-    }, 3000);
-} 
-   
+            
+            // 1. Sembunyikan seluruh isi form username & password biar tidak menumpuk ke bawah
+            document.getElementById("loginContentArea").style.display = "none";
+            
+            // 2. Munculkan pesan sukses pas di tengah-tengah kartu login
+            const successBox = document.getElementById("successMessage");
+            successBox.style.display = "block";
+            
+            // 3. Setelah 2 detik, langsung pindah otomatis ke halaman index utama
+            setTimeout(() => {
+                window.location.href = "../index.html";
+            }, 2000);
+             
+        } else {
+            // Pesan jika username atau password salah (bukan heri / 123)
+            alert("Username atau Password salah, silakan coba lagi.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Terjadi masalah koneksi ke server API.");
+    } 
 });
