@@ -16,10 +16,11 @@ body {
 .navbar {
     background-color: #000000;
     width: 100%;
-    position: fixed;
+    position: fixed; /* Membikin navbar tetap menempel di atas */
     top: 0;
     left: 0;
-    z-index: 1000;
+    /* --- TAMBAHKAN ATAU PASTIKAN BARIS DI BAWAH INI ADA --- */
+    z-index: 9999 !important; /* Angka besar + !important memastikan navbar berada di lapisan PALING DEPAN */
     border-bottom: 1px solid #1a1a1a;
 }
 
