@@ -1,3 +1,7 @@
+/* ==========================================
+   KODE STYLE.CSS ASLI KOPI AYU (TERUPDATE)
+   ========================================== */
+
 /* RESET DASAR */
 * {
     margin: 0;
@@ -19,7 +23,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999 !important; /* Memastikan navbar berada di lapisan paling depan */
+    /* Trik Sakti: z-index dipastikan paling depan agar tidak terhalang banner */
+    z-index: 99999 !important; 
     border-bottom: 1px solid #1a1a1a;
 }
 
@@ -37,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #bc9c74; /* Warna Cokelat Emas */
+    color: #bc9c74; /* Warna Cokelat Emas Kopi Ayu */
     font-size: 24px;
     font-weight: bold;
 }
@@ -75,7 +80,7 @@ body {
     align-items: center;
     gap: 15px;
     position: relative;
-    z-index: 10000;
+    z-index: 100000 !important; /* Maju paling depan di atas background */
 }
 
 .status-text {
@@ -85,39 +90,34 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Tombol Login Utama Beranda (Khusus Tag Button) */
-.login-btn {
+/* Tombol Login Kotak Cokelat Emas */
+.login-btn, .login-btn-nav {
     background-color: #bc9c74;
     color: #ffffff;
     padding: 8px 20px;
     border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     transition: all 0.3s ease;
     display: inline-block;
-    border: none; /* Menghilangkan border bawaan button */
-    cursor: pointer; /* Mengubah kursor jadi lambang jari tangan */
+    border: none;
+    cursor: pointer; /* Kursor berubah jadi jari biar ketahuan bisa diklik */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.login-btn:hover {
+.login-btn:hover, .login-btn-nav:hover {
     background-color: #a48560;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(188, 156, 116, 0.3);
 }
 
-.login-btn:active {
-    transform: translateY(0);
-}
-
-/* BAGIAN HERO BACKGROUND */
+/* BAGIAN HERO BACKGROUND UTAMA */
 .hero-section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url('../img/bg-hero.jpg'); 
-    background-size: cover;
-    background-position: center;
+    background-color: #111111; /* Fallback jika gambar belum muncul */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
     z-index: 1;
 }
 
@@ -142,7 +142,7 @@ body {
     padding: 0 20px;
 }
 
-/* TEKS WELCOME */
+/* TEKS WELCOME "SELAMAT DATANG" */
 .welcome-text {
     font-size: 48px;
     color: #ffffff;
@@ -157,7 +157,7 @@ body {
     font-style: italic;
 }
 
-/* DEKORASI LAMPU MELAYANG */
+/* DEKORASI LAMPU MELAYANG PUNYAMU */
 .lamps-container {
     display: flex;
     justify-content: center;
